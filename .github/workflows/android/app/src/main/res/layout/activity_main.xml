@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Motion Stream"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Connection to the PC" />
+
+        <RadioGroup
+            android:id="@+id/link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/linkHotspot"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Wi-Fi hotspot" />
+
+            <RadioButton
+                android:id="@+id/linkUsb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="USB tethering" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/host"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="PC address, for example 192.168.42.10"
+            android:importantForAutofill="no"
+            android:inputType="textUri|textNoSuggestions"
+            android:singleLine="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/port"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Port"
+                android:importantForAutofill="no"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/rate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Rate (Hz)"
+                android:importantForAutofill="no"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/batch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Batch (ms)"
+                android:importantForAutofill="no"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <Switch
+            android:id="@+id/saver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Let the CPU sleep between batches" />
+
+        <Button
+            android:id="@+id/toggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Start streaming" />
+
+        <Button
+            android:id="@+id/battery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Battery optimization settings" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/networks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="monospace" />
+    </LinearLayout>
+</ScrollView>
